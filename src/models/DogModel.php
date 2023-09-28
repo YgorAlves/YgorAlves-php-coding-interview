@@ -17,4 +17,28 @@ class DogModel {
 	public function getDogs() {
 		return $this->dogData;
 	}
+
+    public function getDogsByClientId($clientId) {
+        $dogs = $this->getDogs();
+        $clientDogs = [];
+        foreach($dogs as $dog) {
+            if ($dog['clientid'] == $clientId) {
+                $clientDogs[] = $dog;
+            }
+        }
+        return $clientDogs;
+    }
+
+    public function getAverageAgeOfDogs($dogs) {
+        $amountOfDogs = count($dogs);
+        if (!$amountOfDogs) return false;
+
+        $ageSum = 0;
+
+        foreach($dogs as $dog) {
+            $ageSum += $dog['age'];
+        }
+
+        return $ageSum / $amountOfDogs;
+    }
 }
