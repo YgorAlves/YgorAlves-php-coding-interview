@@ -8,7 +8,7 @@
       "name": "samuel",
       "email": "samuel.rojas@beon.studio"
     }
-  ]
+  ],
   "autoload": {
     "psr-4": {
       "Src\\": "src/"

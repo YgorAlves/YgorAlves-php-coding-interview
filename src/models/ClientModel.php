@@ -11,7 +11,7 @@ class ClientModel {
 
 	function __construct() {
 		$this->helper = new Helpers();
-		$string = file_get_contents(dirname(__DIR__) . '../scripts/clients.json');
+		$string = file_get_contents(dirname(__DIR__) . '/../scripts/clients.json');
 		$this->clientData = json_decode($string, true);
 	}
 
@@ -53,4 +53,14 @@ class ClientModel {
 		}
 		return null;
 	}
+
+    public function getClientByEmail($email) {
+        $clients = $this->getClients();
+        foreach ($clients as $client) {
+            if ($client['email'] == $email) {
+                return $client;
+            }
+        }
+        return null;
+    }
 }
