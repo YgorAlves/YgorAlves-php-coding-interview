@@ -1,0 +1,51 @@
+version: '3.7'
+
+services:
+  php:
+    build:
+      context: ./.docker/php
+    container_name: php
+    restart: unless-stopped
+    privileged: true
+    ports:
+      - '9000:9000'
+    volumes:
+      - ./:/var/www
+    networks:
+      - beon-network
+#    depends_on:
+#      - db
+#      - redis
+
+#  nginx:
+#    image: 'nginx:1.17-alpine'
+#    container_name: beon-nginx
+#    restart: unless-stopped
+#    ports:
+#      - '8000:80'
+#    expose:
+#      - '8000'
+#      - '3000'
+#    volumes:
+#      - ./:/var/www
+#      - ./.docker/nginx:/etc/nginx/conf.d
+#    networks:
+#      - beon-network
+
+#  redis:
+#    image: redis:alpine
+#    container_name: beon-redis
+#    volumes:
+#      - beon-data:/data
+#    ports:
+#      - '6382:6379'
+#    networks:
+#      - beon-network
+
+networks:
+  beon-network:
+    driver: bridge
+
+volumes:
+  beon-data:
+    driver: local
