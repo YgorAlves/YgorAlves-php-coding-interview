@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "username": "arojas",
+        "name": "Antonio Rojas",
+        "email": "arojas@dogeplace.com",
+        "phone": "1234567"
+    },
+    {
+        "id": 2,
+        "username": "gcarbajal",
+        "name": "Giuliana Carbajal",
+        "email": "gcarbajal@dogeplace.com",
+        "phone": "1234567"
+    },
+    {
+        "id": 3,
+        "username": "cperez",
+        "name": "Carlos Perez",
+        "email": "cperez@dogeplace.com",
+        "phone": "2222222",
+        "points": 36
+    },
+    {
+        "id": 4,
+        "username": "jlopez",
+        "name": "Julian Lopez",
+        "email": "jlopez@dogeplace.com",
+        "phone": "1234567"
+    },
+    {
+        "username": "newuser",
+        "name": "New User",
+        "email": "newuser@dogeplace.com",
+        "phone": "5555555",
+        "id": 5
+    }
+]
